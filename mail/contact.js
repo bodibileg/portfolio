@@ -16,7 +16,7 @@ $(function () {
             $this.prop("disabled", true);
 
             $.ajax({
-                url: "https://lambda",
+                url: "https://qxwdnfr4fh.execute-api.us-east-2.amazonaws.com/v1/contact",
                 type: "POST",
                 data: JSON.stringify({
                     name: name,
@@ -27,6 +27,7 @@ $(function () {
                 }),
                 contentType: 'application/json',
                 cache: false,
+                origin: '*',
                 success: function () {
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='btn btn-outline-primary' data-dismiss='alert' aria-hidden='true'>&times;")
